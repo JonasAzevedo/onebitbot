@@ -6,7 +6,7 @@ gem 'pg'
 gem 'rake'
 
 group :development do
- gem "tux"
+  gem "tux"
 end
 
 group :test do
