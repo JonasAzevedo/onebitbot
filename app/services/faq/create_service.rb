@@ -5,7 +5,7 @@ module FaqModule
       @company = Company.last
       @question = params["question.original"]
       @answer = params["answer.original"]
-      @hashtags = "xx"# params["hashtags.original"]
+      @hashtags = params["hashtags.original"]
     end
 
     def call
@@ -15,7 +15,7 @@ module FaqModule
 
       begin
         Faq.transaction do
-            faq = Faq.create(question: @question, answer: @answer, company: @company)
+          faq = Faq.create(question: @question, answer: @answer, company: @company)
           @hashtags.split(/[\s,]+/).each do |hashtag|
             faq.hashtags << Hashtag.create(name: hashtag)
           end
