@@ -5,7 +5,7 @@ module FaqModule
       @company = Company.last
       @question = params["question.original"]
       @answer = params["answer.original"]
-      @hashtags = params["hashtags.original"]
+      @hashtags = "xx"#params["hashtags.original"]
     end
 
     def call
