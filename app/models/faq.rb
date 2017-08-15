@@ -1,6 +1,7 @@
 require "pg_search"
 include PgSearch
 
+
 class Faq < ActiveRecord::Base
   validates_presence_of :question, :answer
 

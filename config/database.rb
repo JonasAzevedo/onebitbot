@@ -10,14 +10,14 @@ configure :test do
 end
 
 configure :development do
- set :database, {
-   adapter: 'postgresql',
-   encoding: 'utf8',
-   database: 'onebitbot_development',
-   pool: 5,
-   username: 'postgres',
-   host: 'postgres'
- }
+    set :database, {
+      adapter: 'postgresql',
+      encoding: 'utf8',
+      database: 'onebitbot_development',
+      pool: 5,
+      username: 'postgres',
+      host: 'postgres'
+    }
 end
 
 configure :production do
@@ -32,3 +32,15 @@ configure :production do
     encoding: 'utf8'
   }
 end
+=begin
+configure :production do
+   set :database, {
+     adapter: 'postgresql',
+     encoding: 'utf8',
+     database: 'onebitbot_production',
+     pool: 5,
+     username: 'postgres',
+     host: 'postgres'
+   }
+end
+=end

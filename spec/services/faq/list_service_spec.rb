@@ -13,7 +13,7 @@ describe FaqModule::ListService do
       expect(response).to match("Nada encontrado")
     end
 
-    it "With two faqs, find questions and answer in response" do
+    it "with list command: With two faqs, find questions and answer in response" do
       @listService = FaqModule::ListService.new({}, 'list')
 
       faq1 = create(:faq, company: @company)
