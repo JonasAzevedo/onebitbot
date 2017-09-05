@@ -11,7 +11,7 @@ module TestLinkModule
       if @action == "test_link_search"
         links = Link.search(@query).where(company: @company)
       elsif @action == "test_link_search_by_hashtag"
-        faqs = []
+        links = []
         @company.links.each do |link|
           link.hashtags.each do |hashtag|
             links << link if hashtag.name == @query
