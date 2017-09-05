@@ -1,5 +1,5 @@
 module TestLinkModule
-  class ListService
+  class ListService 
     def initialize(params, action)
       # TODO: identify origin and set company
       @company = Company.last
@@ -17,8 +17,10 @@ module TestLinkModule
             links << link if hashtag.name == @query
           end
         end
-      else @action == "test_link_list"
+      elsif @action == "test_link_list"
         links = @company.links
+      else
+        links = nil
       end
 
       response = "*Link's* \n\n"
