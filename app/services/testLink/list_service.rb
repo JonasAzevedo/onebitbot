@@ -1,5 +1,5 @@
 module TestLinkModule
-  class ListService 
+  class ListService
     def initialize(params, action)
       # TODO: identify origin and set company
       @company = Company.last
