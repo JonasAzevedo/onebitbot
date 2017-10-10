@@ -8,21 +8,8 @@ module TestLinkModule
     end
 
     def call
-      if @action == "test_link_search"
-        links = Link.search(@query).where(company: @company)
-      elsif @action == "test_link_search_by_hashtag"
-        links = []
-        @company.links.each do |link|
-          link.hashtags.each do |hashtag|
-            links << link if hashtag.name == @query
-          end
-        end
-      elsif @action == "test_link_list"
-        links = @company.links
-      else
-        links = nil
-      end
-
+      links = @company.links
+      
       response = "*Link's* \n\n"
       links.each do |link|
         response += "*#{link.id}* - "
