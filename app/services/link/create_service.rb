@@ -1,4 +1,4 @@
-module TestLinkModule
+module LinkModule
   class CreateService
     def initialize(params)
       # TODO: identify origin and set company
@@ -6,7 +6,6 @@ module TestLinkModule
       @link = params["link-original"]
       @hashtags = params["hashtags-original"]
     end
-
 
     def call
       if @hashtags == nil || @hashtags == ""
@@ -20,9 +19,9 @@ module TestLinkModule
             link.hashtags << Hashtag.create(name: hashtag)
           end
         end
-        "Link criado com sucesso"
+        "Criado com sucesso"
       rescue
-        "Problemas na criação do link"
+        "Problemas na criação"
       end
     end
   end
