@@ -1,4 +1,4 @@
-module TestLinkModule
+module LinkModule
   class RemoveService
     def initialize(params)
       # TODO: identify origin and set company
