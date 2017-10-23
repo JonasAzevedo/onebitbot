@@ -20,7 +20,7 @@ module LinkModule
           end
         end
       else #if @action == "link_list"
-        links = @company.links
+        links = Link.all
       end
 
       response = "*Link's* \n\n"
