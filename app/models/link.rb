@@ -9,5 +9,5 @@ class Link < ActiveRecord::Base
   belongs_to :company
 
   # include PgSearch
-  pg_search_scope :search, :against => [:link]
+  pg_search_scope :link_search, :against => [:link]
 end
