@@ -31,7 +31,6 @@ module LinkModule
         l.hashtags.each do |h|
           response += "_##{h.name}_ "
         end
-        response += @company
         response += "\n\n"
       end
       (links.count > 0)? response : "Nada encontrado " #xxxxxxx + @company.id
