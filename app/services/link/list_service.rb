@@ -9,7 +9,7 @@ module LinkModule
 
     def call
       if @action == "link_search"
-        links = Link.first
+        links = Link.all
         #links = Link.link_search(@query)
         #links = Link.search('google') # .where(company: @company)
         #faqs = Faq.search(@query).where(company: @company)
