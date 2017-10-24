@@ -33,7 +33,7 @@ module LinkModule
         end
         response += "\n\n"
       end
-      (links.count > 0)? response : "Nada encontrado " + @company.id
+      (links.count > 0)? response : "Nada encontrado " #xxxxxxx + @company.id
     end
   end
 end
