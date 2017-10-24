@@ -16,7 +16,7 @@ class InterpretService
     when "link_remove"
       LinkModule::RemoveService.new(params).call()
     else
-      "Não compreendi o seu desejo" + action
+      "Não compreendi o seu desejo"
     end
   end
 end

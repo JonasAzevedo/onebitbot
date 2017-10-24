@@ -1,7 +1,7 @@
 module LinkModule
   class ListService
     def initialize(params, action)
-      # xTODO: identify origin and set company
+      # TODO: identify origin and set company
       @company = Company.last
       @action = action
       @query = params["query"]
@@ -9,9 +9,8 @@ module LinkModule
 
     def call
       if @action == "link_search"
-        links = Link.all
-        #links = Link.link_search(@query)
-        #links = Link.search('google') # .where(company: @company)
+        #links = Link.all
+        links = Link.search(@query).where(company: @company)
         #faqs = Faq.search(@query).where(company: @company)
       elsif @action == "link_search_by_hashtag"
         links = []
@@ -26,7 +25,8 @@ module LinkModule
 
       response = "*Link's* \n\n"
       links.each do |l|
-        response += "*#{l.id}* - "
+          response += "*#{l.id}* - "
+          response += "*#{l.company_id}* - "
         response += "*#{l.link}*\n"
         l.hashtags.each do |h|
           response += "_##{h.name}_ "
