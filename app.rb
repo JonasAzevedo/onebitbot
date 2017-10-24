@@ -13,7 +13,7 @@ class App < Sinatra::Base
   end
 
   get '/links' do
-    puts  InterpretService.call("test_link_list", "1")
+    puts  InterpretService.call("link_search", "www.google.com")
   end
 
   post '/webhook' do
