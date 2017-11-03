@@ -10,6 +10,7 @@ module LinkModule
     def call
       if @action == "link_search"
         links = Link.link_search(@query).where(company: @company)
+        #links = Link.all
         #faqs = Faq.search(@query).where(company: @company)
       elsif @action == "link_search_by_hashtag"
         links = []

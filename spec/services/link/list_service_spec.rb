@@ -42,6 +42,19 @@ describe LinkModule::ListService do
       expect(response).to match(link.link)
     end
 
+    it "with search command: With valid query, find link create in response" do
+      link = create(:link, company: @company)
+
+      @link = "google"
+      @listService = LinkModule::ListService.new({'query' => @link}, 'link_search')
+      puts link.link
+      ## xxxxxxxxxxxxxxxxxxxxxxxxxx
+
+      response = @listService.call()
+
+      expect(response).to match(link.link)
+    end
+
     it "with search_by_hashtag command: With invalid hashtag, return don't find message" do
       @listService = LinkModule::ListService.new({'query' => ''}, 'link_search_by_hashtag')
 

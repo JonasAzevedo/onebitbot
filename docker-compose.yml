@@ -17,6 +17,6 @@ services:
     #definindo variável de ambiente
     environment:
       - LANG=C.UTF-8
-
+ 
 volumes:
   postgres:

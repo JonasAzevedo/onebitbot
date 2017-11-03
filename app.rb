@@ -1,4 +1,4 @@
-require 'json'
+  require 'json'
 require 'sinatra'
 require 'sinatra/activerecord'
 
@@ -14,6 +14,10 @@ class App < Sinatra::Base
 
   get '/links' do
     puts  InterpretService.call("link_search", "www.google.com")
+  end
+
+  get '/links2' do
+    puts  InterpretService.call("link_list", "www.google.com")
   end
 
   post '/webhook' do
