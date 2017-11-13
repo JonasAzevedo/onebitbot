@@ -38,12 +38,7 @@ describe FaqModule::ListService do
     it "with search command: With valid query, find question and answer in response" do
       faq = create(:faq, company: @company)
 
-      puts faq.question
       @f = faq.question.split(" ").sample
-      puts @f
-      ## xxxxxxxxxxxxxxxxxxxxxxxxxx
-
-      #@listService = FaqModule::ListService.new({'query' => faq.question.split(" ").sample}, 'search')
       @listService = FaqModule::ListService.new({'query' => @f}, 'search')
 
       response = @listService.call()

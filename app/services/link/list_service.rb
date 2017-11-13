@@ -9,9 +9,11 @@ module LinkModule
 
     def call
       if @action == "link_search"
-        links = Link.link_search(@query).where(company: @company)
-        #links = Link.all
-        #faqs = Faq.search(@query).where(company: @company)
+        if @query == nil
+          return "Nada encontrado"
+        end
+        @qryLike = '%' + @query + '%'
+        links = Link.where('link LIKE ?', @qryLike).where(company: @company)
       elsif @action == "link_search_by_hashtag"
         links = []
         @company.links.each do |link|
@@ -33,7 +35,7 @@ module LinkModule
         end
         response += "\n\n"
       end
-      (links.count > 0)? response : "Nada encontrado " #xxxxxxx + @company.id
+      (links.count > 0)? response : "Nada encontrado"
     end
   end
 end

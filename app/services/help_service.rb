@@ -1,18 +1,19 @@
 class HelpService
   def self.call
-    response  = "*O que eu sei fazer :raised_hands:* \n\n"
-    response += "*help*\n"
+    response  = "*O que eu sei fazer* \n\n"
     response += ">Lista de comandos que eu conheço\n\n"
-    response += "*Adicione ao Faq*\n"
-    response += ">Adiciona uma nova questão ao Faq\n\n"
-    response += "*Remova ID*\n"
-    response += ">Remove uma questão baseada no ID dela\n\n"
-    response += "*O que você sabe sobre X*\n"
-    response += ">Pesquisa por palavra na lista de perguntas e respostas\n\n"
-    response += "*Pesquise a hashtag X*\n"
-    response += ">Lista as perguntas e respostas com aquela hashtag\n\n"
-    response += "*Perguntas e Respostas*\n"
-    response += ">Mostra a lista de perguntas e respostas\n\n"
+    response += "*FAQ's*\n"
+    response += "-> Adicione ao faq\n\n"
+    response += "-> Me mostre o faq\n\n"
+    response += "-> Encontre a faq x\n\n"
+    response += "-> Pesquise a hashtag x\n\n"
+    response += "-> Remova do faq x\n\n"
+    response += "*LINK's*\n\n"
+    response += "-> Novo link\n\n"
+    response += "-> Me mostre os links\n\n"
+    response += "-> Conhece o link x\n\n"
+    response += "-> hashtag link x\n\n"
+    response += "-> remova link x\n\n"
     response
   end
 end
