@@ -1,6 +1,6 @@
 ![ruby](https://img.shields.io/badge/Ruby-2.3.1-red.svg)
 ![docker](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)
-![Sinatra]
+**Sinatra**
 
 
 # Sobre
