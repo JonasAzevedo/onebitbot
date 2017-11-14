@@ -18,7 +18,7 @@ O OneBitBot é um webhook de chatbot podendo ser adaptado para as mais diversas 
 * Suba o app
   * docker-compose up --build
 
-* Crie um endpoint do seu app. Para isso instale o [ngrok] (https://ngrok.com)
+* Crie um endpoint do seu app. Para isso instale o [ngrok](https://ngrok.com)
 * No diretório que instalou o ngrok execute:
   * ./ngrok http 9292
 * Copie o link gerado pelo ngrok
