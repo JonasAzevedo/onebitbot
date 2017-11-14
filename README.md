@@ -23,8 +23,8 @@ O OneBitBot é um webhook de chatbot podendo ser adaptado para as mais diversas 
   * ./ngrok http 9292
 * Copie o link gerado pelo ngrok
 
-* Conecte o chatbot a uma ferramenta de compreensão de linguagem natural (integrar aplicativos com o chatbot)
+* Conecte o chatbot a uma ferramenta de compreensão de linguagem natural
 * Utilizei o dialogflow: https://dialogflow.com
   * O link gerado pelo ngrok, deve ser inserido na opção fulfillment -> webook, sendo acrescido a URN webhook. 
     Exemplo: http://2327c363.ngrok.io/webhook
-  * O dialogflow permite a integração com vários aplicativos, exemplos: slack, facebook, twitter, etc.
+  * O dialogflow permite a integração com vários aplicativos, exemplos: slack, facebook, twitter, etc.
