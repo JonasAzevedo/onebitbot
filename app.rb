@@ -12,14 +12,6 @@ class App < Sinatra::Base
     'Hello world Sinatra!'
   end
 
-  get '/links' do
-    puts  InterpretService.call("link_search", "www.google.com")
-  end
-
-  get '/links2' do
-    puts  InterpretService.call("link_list", "www.google.com")
-  end
-
   post '/webhook' do
     result = JSON.parse(request.body.read)["result"]
     if result["contexts"].present?
